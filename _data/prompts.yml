@@ -1,0 +1,91 @@
+# ============================================
+# 提示词数据文件
+# ============================================
+# 管理说明：
+# 1. 在 GitHub 网页编辑此文件来添加/修改提示词
+# 2. 每条提示词格式如下：
+#    - id: 唯一标识（英文+数字，如 writing-001）
+#      title: 显示标题
+#      tags: [标签1, 标签2]
+#      short: true/false（true=短提示词可复制，false=长提示词需下载）
+#      content: 提示词正文（short: true 时填写）
+#      download_url: 下载链接（short: false 时填写）
+#      description: 简要说明（可选）
+#      is_new: true/false（是否标记为"新"）
+# 3. 下载文件放在 downloads/prompts/ 目录下
+
+写作类:
+  - id: writing-001
+    title: 专业报告写作助手
+    tags: [写作, 报告, 正式]
+    short: false
+    download_url: /downloads/prompts/专业报告写作助手.txt
+    description: 用于生成专业格式的工作报告、分析报告，结构清晰，语言正式。
+    is_new: true
+
+  - id: writing-002
+    title: 学术论文润色提示词
+    tags: [写作, 学术, 润色]
+    short: true
+    content: |
+      请对以下学术论文段落进行润色，要求：
+      1. 保持原文核心观点和学术逻辑不变
+      2. 修正语法错误和不规范表达
+      3. 优化句式结构，使行文更流畅
+      4. 确保学术用语准确、规范
+      5. 不要添加原文没有的观点或论证
+
+      待润色文本：
+      [在此粘贴你的文本]
+
+数据分析类:
+  - id: data-001
+    title: 数据清洗与预处理指令
+    tags: [数据分析, Python, 清洗]
+    short: true
+    content: |
+      你是一个数据分析专家。请对以下数据进行清洗和预处理：
+      1. 检查缺失值并给出处理建议（删除/填充/插值）
+      2. 识别异常值（使用 IQR 或 Z-score 方法）
+      3. 检查数据类型是否正确
+      4. 检查重复记录
+      5. 给出 Python 代码实现
+
+      数据描述：
+      [在此描述你的数据]
+
+  - id: data-002
+    title: EDA 探索性数据分析提示词
+    tags: [数据分析, EDA, 可视化]
+    short: false
+    download_url: /downloads/prompts/EDA探索性数据分析.txt
+    description: 完整的 EDA 分析流程提示词，涵盖数据概况、分布分析、相关性分析等。
+
+金融类:
+  - id: finance-001
+    title: 金融数据分析框架
+    tags: [金融, 分析, 框架]
+    short: false
+    download_url: /downloads/prompts/金融数据分析框架.txt
+    description: 用于金融数据的系统分析，包含基本面分析、技术指标分析等模块。
+
+日常效率类:
+  - id: efficiency-001
+    title: 会议纪要整理模板
+    tags: [效率, 会议, 整理]
+    short: true
+    content: |
+      请将以下会议记录整理为标准会议纪要格式：
+      1. 会议主题：[自动提取]
+      2. 参会人员：[自动提取]
+      3. 会议时间：[自动提取]
+      4. 讨论要点：
+         - 要点1（附关键信息）
+         - 要点2（附关键信息）
+      5. 决议事项：
+         - 决议1 | 负责人 | 截止时间
+      6. 待跟进事项：
+         - 事项1 | 负责人 | 状态
+
+      原始会议记录：
+      [在此粘贴]

@@ -1,0 +1,64 @@
+# ============================================
+# Skill 技能文件数据
+# ============================================
+# 管理说明：
+# 1. 在 GitHub 网页编辑此文件来添加/修改 Skill
+# 2. 每条 Skill 格式如下：
+#    - name: 技能名称
+#      description: 简要描述
+#      version: 版本号
+#      updated: 更新日期
+#      download_url: 下载链接（文件放在 downloads/skills/ 目录下）
+# 3. 新增分类直接在下方添加即可
+
+数据分析:
+  - name: 数据分析工作流
+    description: 完整的数据分析流程，从数据获取到可视化报告
+    version: "1.0"
+    updated: "2026-05-01"
+    download_url: /downloads/skills/data-analysis-workflow.md
+
+  - name: 数据探索与清洗
+    description: 数据集探索性分析，包含缺失值、异常值、分布检查
+    version: "1.1"
+    updated: "2026-05-10"
+    download_url: /downloads/skills/data-exploration.md
+
+文档处理:
+  - name: Word 文档自动生成
+    description: 使用 python-docx 生成标准公文格式的 Word 文档
+    version: "1.2"
+    updated: "2026-05-15"
+    download_url: /downloads/skills/word-doc-generator.md
+
+  - name: PDF 文档处理
+    description: PDF 文本的提取、合并、拆分等操作
+    version: "1.0"
+    updated: "2026-04-20"
+    download_url: /downloads/skills/pdf-processor.md
+
+量化交易:
+  - name: Baostock 数据获取
+    description: 使用 Baostock API 获取 A 股 K 线、财务、宏观数据
+    version: "2.0"
+    updated: "2026-05-20"
+    download_url: /downloads/skills/baostock-api.md
+
+  - name: 回测框架
+    description: 量化策略回测框架，支持5201只股票、987万行数据
+    version: "1.0"
+    updated: "2026-03-15"
+    download_url: /downloads/skills/backtest-framework.md
+
+自动化:
+  - name: 定时任务管理
+    description: GitHub Actions 定时任务配置模板
+    version: "1.0"
+    updated: "2026-05-01"
+    download_url: /downloads/skills/cron-jobs.md
+
+  - name: 邮件自动发送
+    description: QQ 邮箱自动发送邮件脚本
+    version: "1.0"
+    updated: "2026-04-25"
+    download_url: /downloads/skills/email-automation.md

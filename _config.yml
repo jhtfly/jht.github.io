@@ -1,0 +1,56 @@
+title: 蒋浩涛的个人博客
+description: 技术笔记 | 提示词 | Skill 技能 | 量化交易
+url: "https://jhtfly.github.io"
+baseurl: ""
+timezone: Asia/Shanghai
+lang: zh-CN
+
+author:
+  name: 蒋浩涛
+  email: 2354730003@qq.com
+  github: https://github.com/jhtfly
+
+# 主题设置
+theme: null
+
+# Markdown 解析器
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 排除文件
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - deploy-guide.md
+  - ".gitignore"
+
+# 默认值
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"
+
+# 文章分页
+paginate: 10
+paginate_path: "/page:num/"
+
+# 密码保护（前端加密，访问加密页面时需输入密码）
+# 密码为访问加密内容的统一密码
+password_protected: true

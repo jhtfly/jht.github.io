@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<div class="home">
+  <section class="hero">
+    <h1>蒋浩涛的技术博客</h1>
+    <p class="hero-desc">量化交易 · 金融数据分析 · AI 提示词 · Skill 技能分享</p>
+  </section>
+
+  <section class="posts-section">
+    <h2 class="section-title">最新文章</h2>
+    <div class="posts-list">
+      {% for post in site.posts limit: 10 %}
+        <article class="post-card">
+          <a href="{{ post.url | relative_url }}">
+            <h3>{{ post.title }}</h3>
+          </a>
+          <div class="post-meta">
+            <time>{{ post.date | date: '%Y-%m-%d' }}</time>
+            {% if post.tags %}
+              {% for tag in post.tags limit: 3 %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            {% endif %}
+            {% if post.password_protected %}
+              <span class="tag tag-locked">密码保护</span>
+            {% endif %}
+          </div>
+          {% if post.excerpt %}
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+
+    {% if site.posts.size > 10 %}
+      <div class="more-posts">
+        <a href="{{ '/blog.html' | relative_url }}" class="btn">查看全部文章 &rarr;</a>
+      </div>
+    {% endif %}
+  </section>
+
+  <section class="quick-links">
+    <h2 class="section-title">快速访问</h2>
+    <div class="links-grid">
+      <a href="{{ '/prompts.html' | relative_url }}" class="link-card">
+        <h3>提示词库</h3>
+        <p>AI 提示词收集与分享，支持一键复制或下载</p>
+      </a>
+      <a href="{{ '/skills.html' | relative_url }}" class="link-card">
+        <h3>Skill 技能</h3>
+        <p>WorkBuddy Skill 技能文件，按分类一键下载</p>
+      </a>
+      <a href="{{ '/about.html' | relative_url }}" class="link-card">
+        <h3>关于我</h3>
+        <p>个人介绍与联系方式</p>
+      </a>
+    </div>
+  </section>
+</div>

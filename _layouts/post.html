@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d' }}</time>
+      {% if page.tags %}
+        <span class="post-tags">
+          {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
+      {% if page.password_protected %}
+        <span class="tag tag-locked">密码保护</span>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.password_protected %}
+  <div class="password-gate" id="password-gate">
+    <div class="password-box">
+      <p>本文内容已加密，请输入密码查看：</p>
+      <input type="password" id="post-password" placeholder="请输入密码">
+      <button onclick="unlockContent()">解锁</button>
+      <p class="password-error" id="password-error" style="display:none;color:#e74c3c;">密码错误，请重试</p>
+    </div>
+  </div>
+  <div class="post-body protected-content" id="post-content" style="display:none;">
+    {{ content }}
+  </div>
+  {% else %}
+  <div class="post-body">
+    {{ content }}
+  </div>
+  {% endif %}
+</article>
+
+<nav class="post-nav">
+  {% if page.previous %}
+    <a class="prev" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+  {% endif %}
+  {% if page.next %}
+    <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+  {% endif %}
+</nav>

@@ -1,0 +1,34 @@
+---
+layout: page
+title: 全部文章
+description: 博客文章归档
+---
+<div class="blog-list">
+  {% if site.posts.size > 0 %}
+    {% for post in site.posts %}
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}">
+          <h3>{{ post.title }}</h3>
+        </a>
+        <div class="post-meta">
+          <time>{{ post.date | date: '%Y-%m-%d' }}</time>
+          {% if post.tags %}
+            {% for tag in post.tags limit: 3 %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          {% endif %}
+          {% if post.password_protected %}
+            <span class="tag tag-locked">密码保护</span>
+          {% endif %}
+        </div>
+        {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  {% else %}
+    <p style="text-align:center;color:var(--color-text-light);padding:40px 0;">
+      暂无文章，敬请期待...
+    </p>
+  {% endif %}
+</div>
