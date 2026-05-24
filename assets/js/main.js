@@ -11,15 +11,15 @@
 // 3. 密码为 SHA-256 哈希值，而非明文
 // ============================
 
-const BLOG_PASSWORD_HASH = 'e10adc3949ba59abbe56e057f20f883e'; // 默认密码: 123456 的SHA-256
+const BLOG_PASSWORD_HASH = 'c0d80065cc186fb8148cdb9f8403dac2756f99ecac5173e36f8bad874096dc8f'; // 默认密码: 123456 的SHA-256
 
 function sha256(message) {
   const encoder = new TextEncoder();
   return crypto.subtle.digest('SHA-256', encoder.encode(message))
-    .then(buffer => {
+    。then(buffer => {
       return Array.from(new Uint8Array(buffer))
-        .map(b => b.toString(16).padStart(2, '0'))
-        .join('');
+        。map(b => b.toString(16).padStart(2, '0'))
+        。join('');
     });
 }
 
