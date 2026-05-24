@@ -106,6 +106,9 @@ pre code {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .site-title {
@@ -262,6 +265,8 @@ pre code {
   font-size: 0.95rem;
   font-weight: 500;
   transition: background var(--transition);
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
