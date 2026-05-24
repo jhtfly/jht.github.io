@@ -1,8 +1,8 @@
 # 蒋浩涛的个人博客 - 部署指南
 
 ## 项目信息
-- 博客地址：https://jhtfly.github.io
-- GitHub 仓库：jhtfly.github.io
+- 博客地址：https://jhtfly.github.io/jht.github.io/
+- GitHub 仓库：jht.github.io
 - 框架：Jekyll（GitHub Pages 原生支持）
 - 密码：默认 `123456`（请尽快修改）
 
@@ -14,7 +14,7 @@
 2. 登录你的 GitHub 账号（jhtfly）
 3. 点击右上角 **「+」** 号，选择 **「New repository」**
 4. 按如下设置填写：
-   - **Repository name**：`jhtfly.github.io`（必须是这个名字）
+   - **Repository name**：`jht.github.io`（必须是这个名字）
    - **Description**（可选）：个人博客
    - **Public**（勾选公开）——GitHub Pages 免费版要求公开
 5. **不要**勾选 "Add a README file"
@@ -36,7 +36,7 @@
 
 1. 打开 GitHub Desktop
 2. File → Add local repository → 选择桌面的 jhtfly-blog 文件夹
-3. Publish repository → 名称填 `jhtfly.github.io`
+3. Publish repository → 名称填 `jht.github.io`
 4. 等待上传完成
 
 ### ⚠️ 重要：确保目录结构完整
@@ -62,13 +62,13 @@
 
 ## 第三步：开启 GitHub Pages
 
-1. 进入仓库页面 https://github.com/jhtfly/jhtfly.github.io
+1. 进入仓库页面 https://github.com/jhtfly/jht.github.io
 2. 点击 **「Settings」**（设置）
 3. 左侧菜单找到 **「Pages」**
 4. 在 "Build and deployment" 下方：
    - **Source** 选择 **「GitHub Actions」**
 5. 保存后回到仓库，等待 Actions 自动构建（通常 1-3 分钟）
-6. 构建成功后，访问 https://jhtfly.github.io 查看博客
+6. 构建成功后，访问 https://jhtfly.github.io/jht.github.io/ 查看博客
 
 > 如果没有看到 "GitHub Actions" 选项，选 "Deploy from a branch"，branch 选 `main`，文件夹选 `/(root)`。
 
@@ -175,7 +175,7 @@
 ## 常见问题
 
 ### Q: 网站打不开？
-- 检查仓库名是否为 `jhtfly.github.io`
+- 检查仓库名是否为 `jht.github.io`
 - 检查 Settings → Pages 是否已开启
 - 等待 3-5 分钟（首次部署可能较慢）
 
@@ -190,5 +190,5 @@
 
 ### Q: 想绑定自定义域名？
 - 修改 `CNAME` 文件内容为你的域名
-- 在域名商处添加 CNAME 记录指向 `jhtfly.github.io`
+- 在域名商处添加 CNAME 记录指向 `jhtfly.github.io/jht.github.io/`
 - 在 GitHub Pages 设置中填写自定义域名
